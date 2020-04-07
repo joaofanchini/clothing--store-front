@@ -1,0 +1,30 @@
+<table class="table table-striped ">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Tamanho</th>
+      <th scope="col">Cor</th>
+      <th scope="col">Preço de etiqueta</th>
+      <th scope="col">Valor pago na compra</th>
+      <th scope="col">Valor de margem</th>
+      <th scope="col">Preço sugerido</th>
+      <th scope="col">Data de criação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of data">
+      <td>{{ d._id }}</td>
+      <td>{{ d.type }}</td>
+      <td>{{ d.brand }}</td>
+      <td>{{ d.size }}</td>
+      <td>{{ d.color }}</td>
+      <td>{{ d.purchaseTagValue }}</td>
+      <td>{{ d.amountPaidOnPurchase }}</td>
+      <td>{{ d.valueForMargin }}</td>
+      <td>{{ d.suggestedPrice }}</td>
+      <td>{{ d.createdDate | date }}</td>
+    </tr>
+  </tbody>
+</table>
