@@ -1,0 +1,167 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm.value)">
+  <div>
+    <label for="type"
+      >Tipo:
+      <p
+        *ngIf="
+          (productForm.get('type').dirty || productForm.get('type').touched) &&
+          productForm.get('type').invalid &&
+          productForm.get('type').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input class="form-control" id="type" type="text" formControlName="type" />
+  </div>
+  <div>
+    <label for="brand"
+      >Marca:
+      <p
+        *ngIf="
+          (productForm.get('brand').dirty ||
+            productForm.get('brand').touched) &&
+          productForm.get('brand').invalid &&
+          productForm.get('brand').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input
+      class="form-control"
+      id="brand"
+      type="text"
+      formControlName="brand"
+    />
+  </div>
+  <div>
+    <label for="characteristics"
+      >Características:
+      <p
+        *ngIf="
+          (productForm.get('characteristics').dirty ||
+            productForm.get('characteristics').touched) &&
+          productForm.get('characteristics').invalid &&
+          productForm.get('characteristics').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input
+      class="form-control"
+      id="characteristics"
+      type="text"
+      formControlName="characteristics"
+    />
+  </div>
+  <div>
+    <label for="size"
+      >Tamanho:
+      <p
+        *ngIf="
+          (productForm.get('size').dirty || productForm.get('size').touched) &&
+          productForm.get('size').invalid &&
+          productForm.get('size').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input class="form-control" id="size" type="text" formControlName="size" />
+  </div>
+  <div>
+    <label for="color"
+      >Cor:
+      <p
+        *ngIf="
+          (productForm.get('color').dirty ||
+            productForm.get('color').touched) &&
+          productForm.get('color').invalid &&
+          productForm.get('color').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input
+      class="form-control"
+      id="color"
+      type="text"
+      formControlName="color"
+    />
+  </div>
+  <div>
+    <label for="purchaseTagValue"
+      >Preço de etiqueta:
+      <p
+        *ngIf="
+          (productForm.get('purchaseTagValue').dirty ||
+            productForm.get('purchaseTagValue').touched) &&
+          productForm.get('purchaseTagValue').invalid &&
+          productForm.get('purchaseTagValue').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input
+      class="form-control"
+      id="purchaseTagValue"
+      mask="0*.00"
+      type="text"
+      [dropSpecialCharacters]="false"
+      formControlName="purchaseTagValue"
+    />
+  </div>
+  <div>
+    <label for="amountPaidOnPurchase"
+      >Valor pago na compra:
+      <p
+        *ngIf="
+          (productForm.get('amountPaidOnPurchase').dirty ||
+            productForm.get('amountPaidOnPurchase').touched) &&
+          productForm.get('amountPaidOnPurchase').invalid &&
+          productForm.get('amountPaidOnPurchase').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input
+      class="form-control"
+      id="amountPaidOnPurchase"
+      type="text"
+      mask="0*.00"
+      [dropSpecialCharacters]="false"
+      formControlName="amountPaidOnPurchase"
+    />
+  </div>
+  <div>
+    <label for="suggestedPrice"
+      >Preço sugerido:
+      <p
+        *ngIf="
+          (productForm.get('suggestedPrice').dirty ||
+            productForm.get('suggestedPrice').touched) &&
+          productForm.get('suggestedPrice').invalid &&
+          productForm.get('suggestedPrice').errors.required
+        "
+      >
+        * campo obrigatório
+      </p></label
+    >
+    <input
+      class="form-control"
+      id="suggestedPrice"
+      mask="0*.00"
+      [dropSpecialCharacters]="false"
+      type="text"
+      formControlName="suggestedPrice"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">
+    Cadastrar
+  </button>
+</form>
